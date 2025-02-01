@@ -1,0 +1,75 @@
+# -----------------
+# Unity generated
+# -----------------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+# Временные файлы Lightmapping
+/[Ll]ibrary/Artifacts/
+
+# Кешированные данные для Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/
+
+# -----------------
+# Unity Build Artifacts
+# -----------------
+/[Bb]uilds/
+/[Bb]uild/
+/[Bb]uild[Ll]ogs/
+*.apk
+*.aab
+*.unitypackage
+
+# -----------------
+# Visual Studio / JetBrains Rider / MonoDevelop
+# -----------------
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.sln.iml
+
+# -----------------
+# OS generated
+# -----------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -----------------
+# Unity Collaborate (Plastic SCM)
+# -----------------
+/[Pp]lastic[Ww]orkspace[Ww]orking[Cc]opies/
+.globl/
+.ignore/
+
+# -----------------
+# Unity Package Manager
+# -----------------
+/[Pp]ackages/*/
+!/[Pp]ackages/manifest.json
+!/[Pp]ackages/packages-lock.json
+!/[Pp]ackages/project.manifest
+
+# -----------------
+# Additional Files
+# -----------------
+/[Tt]emp[Uu]pdate/
+**/*.lock
+**/~*
