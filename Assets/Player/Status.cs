@@ -13,6 +13,11 @@ public class Status : MonoBehaviour
 
     public void ChangeHealth(float value)
     {
+        if (Mathf.Sign(value) == -1)
+        {
+            GetComponent<PlayerSound>().PlayPainSound();
+        }
+
         _health += value;
 
         if (_health <= 0)

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _camera;
     [SerializeField] private Transform _groundChecker;
     [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private Animator _swordAnimator;
 
     [Header("Settings")]
     [SerializeField] private float _checkRaduis = 0.2f;
@@ -19,8 +20,12 @@ public class PlayerController : MonoBehaviour
 
     private float _rotationX;
     private bool _isGrounded;
+    private bool _isRunning = false;
     private Vector3 _velocity;
     private Vector3 _move;
+
+    public bool IsGrounded => _isGrounded;
+    public bool IsRunning => _isRunning;
 
     private void Start()
     {
@@ -39,6 +44,11 @@ public class PlayerController : MonoBehaviour
 
         Move();
         Rotate();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
     }
 
     private void Rotate()
@@ -63,10 +73,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && (moveX != 0 || moveY != 0))
         {
+            _isRunning = true;
             _player.Move(_move * _runSpeed * Time.deltaTime);
         }
         else
         {
+            _isRunning = false;
             _player.Move(_move * _speed * Time.deltaTime);
         }
     }
@@ -93,5 +105,10 @@ public class PlayerController : MonoBehaviour
         }
 
         _player.Move(_velocity * Time.deltaTime);
+    }
+
+    private void Attack()
+    {
+        _swordAnimator.Play("SwordAttack");
     }
 }
